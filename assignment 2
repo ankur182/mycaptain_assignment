@@ -1,0 +1,198 @@
+1.
+#complete methods of dictionary( doing in anaconda)
+
+In [1]:
+capitals={"Maharashtra":"Mumbai", "Telangana":"Hyderabad", "Tamilnadu":"Chennai", "Karnataka":"Bengaluru", "Bihar":"Patna"}
+rankings={1:"India", 2:"England", 3:"South Africa", 4:"Australia", 5:"New Zealand"}
+prices={"pen":25, "bike":50000, "mobile": 5000,"book": 250 }
+In [2]:
+print ("state capitals:", capitals)
+print ("Team rankings:", rankings)
+print ("prices:",prices)
+Out[2]:
+state capitals: {'Maharashtra': 'Mumbai', 'Telangana': 'Hyderabad', 'Tamilnadu': 'Chennai', 'Karnataka': 'Bengaluru', 'Bihar': 'Patna'}
+Team rankings: {1: 'India', 2: 'England', 3: 'South Africa', 4: 'Australia', 5: 'New Zealand'}
+prices: {'pen': 25, 'bike': 50000, 'mobile': 5000, 'book': 250}
+
+In [6]:
+capitals={"Maharashtra":"Mumbai", "Telangana":"Hyderabad", "Tamilnadu":"Chennai", "Karnataka":"Bengaluru", "Bihar":"Patna"}
+capitals.get("Karnataka")
+Out[6]:
+'Bengaluru'
+In [7]:
+prices={"pen":25, "bike":50000, "mobile": 5000,"book": 250 }
+prices['bike']
+Out[7]:
+50000
+
+In [8]:
+ChiefMinisters={"Maharashtra":"Fadanvis","UP":"Yogi", "Karnataka":"KumarSwamy", "MP":"chauhan"}
+ChiefMinisters["MP"]="KamalNath"
+ChiefMinisters["Maharashtra"]="Thakre"
+ChiefMinisters
+Out[8]:
+{'Maharashtra': 'Thakre',
+'UP': 'Yogi',
+'Karnataka': 'KumarSwamy',
+'MP': 'KamalNath'}
+In [9]:
+ChiefMinisters["Delhi"]="Kejriwal"
+ChiefMinisters
+Out[9]:
+{'Maharashtra': 'Thakre',
+'UP': 'Yogi',
+'Karnataka': 'KumarSwamy',
+'MP': 'KamalNath',
+'Delhi': 'Kejriwal'}
+
+In [10]:
+players={"A":"Anderson", "B":"Bravo", "C":"Currran","D":"Dhawan"}
+len(players)
+Out[10]:
+4
+In [11]:
+print ('max :',max(players))
+print ('min : ', min(players))       
+max : D
+min :  A
+In [12]:
+digwords={2:"two",9:"nine", 6:"six", 1:"one"}
+print ('max:', max(digwords))
+print ('min:', min(digwords))
+max: 9
+min: 1
+
+In [13]:
+d1=dict()
+d1
+Out[13]:
+{}
+In [14]:
+dict([(1,100),(2,200),(3,300)])
+Out[14]:
+{1: 100, 2: 200, 3: 300}
+In [15]:
+dict(a=1, b=2, c=3)
+Out[15]:
+{'a': 1, 'b': 2, 'c': 3}
+
+In [16]:
+CMs={'Maharashtra': 'Thakre', 'UP': 'Yogi', 'Karnataka': 'KumarSwamy', 'MP': 'KamalNath', 'Delhi': 'Kejriwal'}
+CMs.items()
+Out[16]:
+dict_items([('Maharashtra', 'Thakre'), ('UP', 'Yogi'), ('Karnataka', 'KumarSwamy'), ('MP', 'KamalNath'), ('Delhi', 'Kejriwal')])
+In [17]:
+CMs.keys()
+Out[17]:
+dict_keys(['Maharashtra', 'UP', 'Karnataka', 'MP', 'Delhi'])
+In [18]:
+CMs.values()
+Out[18]:
+dict_values(['Thakre', 'Yogi', 'KumarSwamy', 'KamalNath', 'Kejriwal'])
+In [19]:
+CMs.pop("UP")
+Out[19]:
+'Yogi'
+
+
+2.
+#complete methods of strings
+#Accessing string characters in Python
+str = 'programiz'
+print('str = ', str)
+
+#first character
+print('str[0] = ', str[0])
+
+#last character
+print('str[-1] = ', str[-1])
+
+#slicing 2nd to 5th character
+print('str[1:5] = ', str[1:5])
+
+#slicing 6th to 2nd last character
+print('str[5:-2] = ', str[5:-2])
+output:
+str =  programiz
+str[0] =  p
+str[-1] =  z
+str[1:5] =  rogr
+str[5:-2] =  am
+
+
+# Python String Operations
+str1 = 'Hello'
+str2 ='World!'
+# using +
+print('str1 + str2 = ', str1 + str2)
+# using *
+print('str1 * 3 =', str1 * 3)
+output:
+str1 + str2 =  HelloWorld!
+str1 * 3 = HelloHelloHello
+str = 'cold'
+
+# enumerate()
+list_enumerate = list(enumerate(str))
+print('list(enumerate(str) = ', list_enumerate)
+
+#character count
+print('len(str) = ', len(str))
+output:
+list(enumerate(str) =  [(0, 'c'), (1, 'o'), (2, 'l'), (3, 'd')]
+len(str) =  4
+
+
+3.
+#accessing values of dictionary in list
+test_list = [{'ankur' : 1, 'is' : 2, 'good' : 3}, 
+             {'ankur' : 2}, {'best' : 3, 'ankur' : 4}]
+# Get values of particular key in list of dictionaries
+res = [ sub['ankur'] for sub in test_list ] 
+print("The values corresponding to key : " + str(res))
+ouput:
+The values corresponding to key : [1, 2, 4]
+
+#accessing values of list in dictionary
+country = {
+    "India": ["Delhi", "Maharastra", "Haryana",
+              "Uttar Pradesh", "Himachal Pradesh"],
+    "Japan": ["Hokkaido", "Chubu", "Tohoku", "Shikoku"],
+    "United States": ["New York", "Texas", "Indiana",
+                      "New Jersey", "Hawaii", "Alaska"]
+}
+print(country["India"][:3])
+print(country["Japan"][-2:])
+print(country["India"][:-3])
+print(country["United States"][1:5])
+output:
+[‘Delhi’, ‘Maharastra’, ‘Haryana’]
+[‘Tohoku’, ‘Shikoku’]
+[‘Delhi’, ‘Maharastra’]
+[‘Texas’, ‘Indiana’, ‘New Jersey’, ‘Hawaii’]
+
+
+4.
+#how to add in  tuple
+
+a_tuple = ("a", "b")
+
+added_value = "c"
+added_value_tuple = (added_value,)
+new_tuple = a_tuple + added_value_tuple
+
+print(new_tuple)
+OUTPUT
+('a', 'b', 'c')
+
+5.
+#implement the below pattern
+num = int(input("Enter the range: \t "))
+# reverse pyramid
+for rp in range(num-1, 1, -1):
+    print(' '*(num-rp)+'* '*rp)
+# pyramid
+for p in range(num):
+    print(' '*(num-p-1)+'* '*(p+1))
+
+
