@@ -1,0 +1,222 @@
+1.
+#to create a calculator usinf if condions only
+
+
+print("Calculator")
+print("1.Add")
+print("2.Substract")
+print("3.Multiply")
+print("4.Divide")
+
+# input choice
+ch=int(input("Enter Choice(1-4): "))
+
+if ch==1:
+    a=int(input("Enter A:"))
+    b=int(input("Enter B:"))
+    c=a+b
+    print("Sum = ",c)
+if ch==2:
+    a=int(input("Enter A:"))
+    b=int(input("Enter B:"))
+    c=a-b
+    print("Difference = ",c)
+if  ch==3:
+    a=int(input("Enter A:"))
+    b=int(input("Enter B:"))
+    c=a*b
+    print("Product = ",c)
+if ch==4:
+    a=int(input("Enter A:"))
+    b=int(input("Enter B:"))
+    c=a/b
+    print("Quotient = ",c)
+else:
+    print("not any Choice")
+   
+   
+2.
+#create a calculator using if conditions and funcions
+
+
+# Program make a simple calculator
+
+# This function adds two numbers
+def add(x, y):
+    return x + y
+
+# This function subtracts two numbers
+def subtract(x, y):
+    return x - y
+
+# This function multiplies two numbers
+def multiply(x, y):
+    return x * y
+
+# This function divides two numbers
+def divide(x, y):
+    return x / y
+
+
+print("Select operation.")
+print("1.Add")
+print("2.Subtract")
+print("3.Multiply")
+print("4.Divide")
+
+while True:
+    # take input from the user
+    choice = input("Enter choice(1/2/3/4): ")
+
+    # check if choice is one of the four options
+    if choice in ('1', '2', '3', '4'):
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+
+        if choice == '1':
+            print(num1, "+", num2, "=", add(num1, num2))
+
+        elif choice == '2':
+            print(num1, "-", num2, "=", subtract(num1, num2))
+
+        elif choice == '3':
+            print(num1, "*", num2, "=", multiply(num1, num2))
+
+        elif choice == '4':
+            print(num1, "/", num2, "=", divide(num1, num2))
+        
+        next_calculation = input("Let's do next calculation? (yes/no): ")
+        if next_calculation == "no":
+          break
+    
+    else:
+        print("Invalid Input")
+        
+3.
+#implements methods of list data struture
+
+
+['shark', 'octopus', 'squid', 'mantis shrimp', 'anemone']
+sea_creatures[-3] = 'blobfish'
+print(sea_creatures)
+Output
+['shark', 'octopus', 'blobfish', 'mantis shrimp', 'anemone']
+
+print(sea_creatures[1:4])
+Output
+['octopus', 'blobfish', 'mantis shrimp']
+
+print(sea_creatures[-4:-2])
+print(sea_creatures[-3:])
+Output
+['octopus', 'blobfish']
+['blobfish', 'mantis shrimp', 'anemone']
+
+sea_creatures = ['shark', 'octopus', 'blobfish', 'mantis shrimp', 'anemone']
+oceans = ['Pacific', 'Atlantic', 'Indian', 'Southern', 'Arctic']
+
+print(sea_creatures + oceans)
+Output
+['shark', 'octopus', 'blobfish', 'mantis shrimp', 'anemone', 'Pacific', 'Atlantic', 'Indian', 'Southern', 'Arctic']
+
+print(sea_creatures * 2)
+print(oceans * 3)
+Output
+['shark', 'octopus', 'blobfish', 'mantis shrimp', 'anemone', 'yeti crab', 'shark', 'octopus', 'blobfish', 'mantis shrimp', 'anemone', 'yeti crab']
+['Pacific', 'Atlantic', 'Indian', 'Southern', 'Arctic', 'Pacific', 'Atlantic', 'Indian', 'Southern', 'Arctic', 'Pacific', 'Atlantic', 'Indian', 'Southern', 'Arctic']
+
+for x in range(1,4):
+    sea_creatures += ['fish']
+    print(sea_creatures)
+Output
+['shark', 'octopus', 'blobfish', 'mantis shrimp', 'anemone', 'yeti crab', 'fish']
+['shark', 'octopus', 'blobfish', 'mantis shrimp', 'anemone', 'yeti crab', 'fish', 'fish']
+['shark', 'octopus', 'blobfish', 'mantis shrimp', 'anemone', 'yeti crab', 'fish', 'fish', 'fish']
+
+sea_creatures =['shark', 'octopus', 'blobfish', 'mantis shrimp', 'anemone', 'yeti crab']
+del sea_creatures[1:4]
+print(sea_creatures)
+Output
+['shark', 'anemone', 'yeti crab']
+
+fish.append('flounder')
+print(fish)
+Output
+['barracuda', 'cod', 'devil ray', 'eel', 'flounder']
+
+print(fish)
+print(fish.index('herring'))
+['anchovy', 'barracuda', 'cod', 'eel', 'flounder', 'goby', 'herring', 'ide']
+6
+
+
+
+4.
+#study abput tuple
+
+# create an empty tuple
+py_tuple = ()
+print("A blank tuple:", py_tuple)
+
+# create a tuple without using round brackets
+py_tuple = 33, 55, 77
+print("A tuple set without parenthesis:", py_tuple, "type:", type(py_tuple))
+
+# create a tuple of numbers
+py_tuple = (33, 55, 77)
+print("A tuple of numbers:", py_tuple)
+
+# create a tuple of mixed numbers
+# such as integer, float, imaginary
+py_tuple = (33, 3.3, 3+3j)
+print("A tuple of mixed numbers:", py_tuple)
+
+# create a tuple of mixed data types
+# such as numbers, strings, lists
+py_tuple = (33, "33", [3, 3])
+print("A tuple of mixed data types:", py_tuple)
+
+# create a tuple of tuples
+# i.e. a nested tuple
+py_tuple = (('x', 'y', 'z'), ('X', 'Y', 'Z'))
+print("A tuple of tuples:", py_tuple)
+
+output:
+A blank tuple: ()
+A tuple set without parenthesis: (33, 55, 77) type: <class 'tuple'>
+A tuple of numbers: (33, 55, 77)
+A tuple of mixed numbers: (33, 3.3, (3+3j))
+A tuple of mixed data types: (33, '33', [3, 3])
+A tuple of tuples: (('x', 'y', 'z'), ('X', 'Y', 'Z'))
+
+
+# creating a tuple from a set
+>>> py_tuple = tuple({33, 55 , 77})
+>>> type(py_tuple)
+<class 'tuple'>
+>>> py_tuple
+(33, 77, 55)
+# creating a tuple from a list
+>>> py_tuple = tuple([33, 55 , 77])
+>>> type(py_tuple)
+<class 'tuple'>
+>>> py_tuple
+(33, 55, 77)
+
+>>> vowels = ('a','e','i','o','u')
+>>> vowels
+('a', 'e', 'i', 'o', 'u')
+>>> vowels[-1]
+'u'
+>>> vowels[-2]
+'o'
+>>> vowels[-5]
+'a'
+>>> vowels[-6]
+Traceback (most recent call last):
+File "<pyshell#64>", line 1, in <module>
+vowels[-6]
+IndexError: tuple index out of range
+   
+   
+   
