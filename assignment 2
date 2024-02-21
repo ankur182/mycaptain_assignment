@@ -188,10 +188,10 @@ OUTPUT
 5.
 #implement the below pattern
 num = int(input("Enter the range: \t "))
-# reverse pyramid
+# reverse pyramids
 for rp in range(num-1, 1, -1):
     print(' '*(num-rp)+'* '*rp)
-# pyramid
+# pyramids
 for p in range(num):
     print(' '*(num-p-1)+'* '*(p+1))
 
