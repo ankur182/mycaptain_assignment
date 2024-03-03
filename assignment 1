@@ -3,8 +3,8 @@
 
 
 print("Calculator")
-print("1.Add")
-print("2.Substract")
+print("1.Addition")
+print("2.Substraction")
 print("3.Multiply")
 print("4.Divide")
 
